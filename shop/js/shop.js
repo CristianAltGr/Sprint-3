@@ -73,18 +73,47 @@ var total = 0;
 
 // Exercise 1
 function buy(id) {
-    // 1. Loop for to the array products to get the item to add to cart
-    // 2. Add found product to the cartList array
+// 1. Loop for to the array products to get the item to add to cart
+// 2. Add found product to the cartList array
+
+   /*for( prod of products){
+       if(id == prod.id ){
+            cartList.push(prod)
+       }   
+    }
+   console.log(cartList);*/
+
+   let i = 0;
+   let check = false;
+
+   while(i<products.length && !check){
+        
+        if( id == products[i].id){
+           cartList.push(products[i]); 
+           check = true;   
+        }
+        i++
+    }
+    console.log(cartList);
 }
 
 // Exercise 2
 function cleanCart() {
 
+    let confirmDelete = confirm("Are you sure? ");
+    if(confirmDelete ==true){
+        for( let i=cartList.length ; i>=0 ; i--){
+            cartList.pop();
+        }
+        console.log("result="+ cartList);
+    }
 }
 
 // Exercise 3
 function calculateTotal() {
     // Calculate total price of the cart using the "cartList" array
+
+    
 }
 
 // Exercise 4
