@@ -44,7 +44,7 @@ function validate() {
 	if(error == 1){
 		alert(" Els camps no poden quedar-se buits.");
 	}else{
-		alert(" Formulari correcte.");
+		//alert(" Formulari correcte.");
 	}
 
 }
@@ -54,6 +54,7 @@ function onlyLetters(fName){
 	const patternName = /[^a-zA-Z]+/g;
 	let check = !patternName.test(fName);
 	let explan = "";
+	let error = 0;
 	document.getElementById("errorName").classList.add("invalid-feedback");
 
 	if(fName.length< 3 ){
@@ -80,7 +81,7 @@ function onlyLetters(fName){
 }
 
 function onlyLettersLName(fLName){
-	
+	let error = 0;	
 	const patternName = /[^a-zA-Z]+/g;
 	let check = !patternName.test(fLName);
 	let explan = "";
@@ -110,7 +111,7 @@ function onlyLettersLName(fLName){
 }
 
 function mailcheking(fEmail){
-
+	let error = 0;
 	const patternMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/
 	let check = patternMail.test(fEmail);
 	let explan = "";
@@ -140,7 +141,7 @@ function mailcheking(fEmail){
 }
 
 function checkPassword(fPassword){
-
+	let error = 0;
 	const patternLetters = /[a-zA-Z]+/g;
 	const patternNum = /\d/g;
 	let checkLet = patternLetters.test(fPassword);
@@ -172,7 +173,7 @@ function checkPassword(fPassword){
 }
 
 function checkAddress(fAddress){
-	
+	let error = 0;
 	let explan = "";
 	document.getElementById("errorAddress").classList.add("invalid-feedback");
 
@@ -193,7 +194,7 @@ function checkAddress(fAddress){
 }
 
 function checkNumber(fPhone){
-	
+	let error = 0;
 	const patternNum = /\d/g;
 	let check = patternNum.test(fPhone);
 	let explan = "";

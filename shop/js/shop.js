@@ -100,17 +100,16 @@ var cart = [];
 var total = 0;
 
 // Exercise 1
-function buy(id) {
+/*function buy(id) {
 // 1. Loop for to the array products to get the item to add to cart
 // 2. Add found product to the cartList array
 
-   /*for( prod of products){
+   for( prod of products){
        if(id == prod.id ){
             cartList.push(prod)
        }   
     }
-   console.log(cartList);*/
-
+   console.log(cartList);
    let i = 0;
    let check = false;
    let countCart = cartList.length; // Print num off items putt in the cartList.
@@ -125,21 +124,22 @@ function buy(id) {
         i++
     }
     document.getElementById("count_product").innerHTML= countCart;
-}
+}*/
 
 // Exercise 2
 function cleanCart() {
 
     let confirmDelete = confirm("Are you sure? ");
     if(confirmDelete ==true){
-        for( let i=cartList.length ; i>=0 ; i--){
+        /*for( let i=cartList.length ; i>=0 ; i--){
             cartList.pop();
-        }
+        }*/
 
         for( let i=cart.length ; i>=0 ; i--){
             cart.pop();
         }
-        
+
+        resetStats()
         total = 0;
         document.getElementById("cart_list").innerHTML= "";
         document.getElementById("total_price").innerHTML= total;
@@ -151,9 +151,9 @@ function cleanCart() {
 function resetStats(){
     
     total= 0;
-    for( let i=cart.length ; i>=0 ; i--){
+    /*for( let i=cart.length ; i>=0 ; i--){
         cart.pop();
-    }   
+    } */  
 
     for(prod of products){
         
@@ -192,15 +192,20 @@ function resetStats(){
 }
 
 
+
 // Exercise 3
 function calculateTotal() {
-    // Calculate total price of the cart using the "cartList" array
+    
     total= 0;
-    // exercise 3 v.1 with cartList
-    /*for( prod of cartList){
-       total+= prod.price
-    }*/
 
+    for(prod of cart){
+
+        prod.subtotal = prod.price * prod.quantity;
+    }
+
+
+    applyPromotionsCart()
+    
     for(prod of cart){
         if((prod.id == 1 && prod.quantity >= 3)||(prod.id == 3 && prod.quantity >= 10)){
             total+= prod.subtotalWithDiscount;
@@ -213,7 +218,7 @@ function calculateTotal() {
 }
 
 // Exercise 4
-function generateCart() {
+/*function generateCart() {
 // Using the "cartlist" array that contains all the items in the shopping cart, 
 // generate the "cart" array that does not contain repeated items, instead each item of this array "cart" shows the quantity of product.
     resetStats()
@@ -243,7 +248,7 @@ function generateCart() {
     }
     applyPromotionsCart()
    //console.log(cart); //check
-}
+}*/
 
 
 
@@ -270,17 +275,15 @@ function applyPromotionsCart() {
         }
 
         i++
-    }
-
-    //console.log(cart);
-           
+    }          
 }
 
 // Exercise 6
 function printCart() {
     // Fill the shopping cart modal manipulating the shopping cart dom
-    generateCart()
+    //generateCart()
     
+    calculateTotal()
     document.getElementById("cart_list").innerHTML= "";
     let list = "";
     
@@ -288,18 +291,18 @@ function printCart() {
 
         if(prod.id == 1 ||prod.id == 3 ){
             if (prod.id == 1 && prod.quantity >= 3){
-                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotalWithDiscount+"</td></tr>"
+                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotalWithDiscount+"</td><td><button type=`button` onclick="+"removeFromCart("+prod.id+") class=`btn btn-secondary`>takeoff</button></td></tr>"
             } else if (prod.id == 3 && prod.quantity >= 10){
-                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotalWithDiscount+"</td></tr>"
+                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotalWithDiscount+"</td><td><button type=`button` onclick="+"removeFromCart("+prod.id+") class=`btn btn-secondary`>takeoff</button></td></tr>"
             } else{
-                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotal+"</td></tr>"
+                list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotal+"</td><td><button type=`button` onclick="+"removeFromCart("+prod.id+") class=`btn btn-secondary`>takeoff</button></td></tr>"
             }
         } else{
-            list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotal+"</td></tr>"
+            list += "<tr><th scope=`row`>"+prod.name+"</th><td>"+prod.price+"</td><td>"+prod.quantity+"</td><td>"+prod.subtotal+"</td><td><button type=`button` onclick="+"removeFromCart("+prod.id+") class=`btn btn-secondary`>takeoff</button></td></tr>"
         }
     }
     
-    calculateTotal()
+    
     document.getElementById("cart_list").innerHTML= list;
 }
 
@@ -311,12 +314,87 @@ function addToCart(id) {
     // Refactor previous code in order to simplify it 
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cart array or update its quantity in case it has been added previously.
+
+   let i = 0;
+   let j = 0;
+   let check = false; 
+   let search = false;
+
+   while(i<products.length && !check){
+        
+        if( id == products[i].id){
+           
+            if(cart.length == 0){
+                cart.push(products[i])
+                check = true;
+            
+            } else if(cart.length > 0){
+                
+                while(cart.length > j && !search){
+            
+                    if( id == cart[j].id){
+                        cart[j].quantity += 1;
+                        search = true;
+                    }else{
+                        j++
+                    }
+                }
+            
+                if(!search){
+                    cart.push(products[i]);
+                }           
+
+                
+                check = true;
+            }  
+        }
+        i++
+    }
+
+    countProd();
+    
+}
+
+// function for do count the prod in the cart and show it at the model.
+
+function countProd(){
+    
+    let count = 0
+    for(prod of cart){
+        
+        count+= prod.quantity; 
+    }
+
+    document.getElementById("count_product").innerHTML= count;
 }
 
 // Exercise 9
 function removeFromCart(id) {
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cartList array
+    let i = 0
+    let found = false;
+
+    while(cart.length>0 && !found){
+
+        if(id == cart[i].id){
+            
+            if(cart[i].quantity > 1){
+                
+                cart[i].quantity -= 1;                
+            }else if(cart[i].quantity == 1){
+                
+                cart.splice(i,1);
+            }
+
+            found = true;
+        } else {
+            i++
+        }
+    }
+
+    countProd();
+    printCart();
 }
 
 function open_modal(){
