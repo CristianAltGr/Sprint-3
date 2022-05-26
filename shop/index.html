@@ -5,21 +5,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>ShopNow</title>
+        <title>YourBooks</title>
+		
+		<link rel="stylesheet" href="./css/styles.css">
         <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="images/libro-abierto.png" />
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 		<!-- Bootstrap icons-->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- Core theme CSS (includes Bootstrap)-->
+		<script src="https://kit.fontawesome.com/1f28589abd.js" crossorigin="anonymous"></script>
     </head>
     <body data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="50">
         <!-- Navigation-->
 		<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
 			 <div class="container d-flex">
-				 <a class="navbar-brand" href="#!">ShopNow</a>
+				 <a class="navbar-brand" href="#!">YourBooks</a>
 				 <div class="d-flex flex-row order-lg-last align-items-center">
 				 
 					 <button type="button" class="navbar-toggler order-last collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,17 +38,17 @@
 					 </ul>
 				 </div>
 
-				 <div id="navbar" class="navbar-collapse collapse">
+				    <div id="navbar" class="navbar-collapse collapse ">
 
-					 <ul class="navbar-nav me-auto mb-4 mb-lg-0 ms-lg-5">
+					 <ul class="navbar-nav m-auto mb-4 mb-lg-0 ms-lg-auto d-flex align-items-center justify-content-between">
 						 <li class="nav-item">
-						  <a class="nav-link" href="#grocery"><i class="fas fa-shopping-basket"></i> Grocery</a>
+						  <a class="nav-link" href="#grocery"><i class="fa-solid fa-earth-europe"></i></i> Adventure</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link" href="#beauty"><i class="fas fa-heart"></i> Beauty</a>
+						  <a class="nav-link" href="#beauty"><i class="fa-solid fa-robot"></i> Sci-fi</a>
 						</li>
 						<li class="nav-item">
-						  <a class="nav-link" href="#clothes"><i class="fas fa-tshirt"></i> Clothes</a>
+						  <a class="nav-link" href="#clothes"><i class="fa-solid fa-user-secret"></i> thriller</a>
 						</li>
 
 					 </ul>
@@ -53,22 +57,23 @@
 		 </nav>
 
         <!-- Header-->
-        <header class="bg-dark py-5">
-            <div class="container px-4 px-lg-5 my-5">
+        <header class="bg-img  d-flex justify-content-center align-items-center" style="background-image: url(./images/hero-img.jpg); height:700px; width: 100%; background-repeat: round;">
+            <div class=" container">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">IT Academy Shop</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Get up to 50% off Today Only!</p>
+                    <h1 class="display-4 fw-bolder">Your books Shop</h1>
+                    <p class="lead fw-normal text-white-50 ">Life adventures with your books!</p>
                 </div>
             </div>
         </header>
+
 		<!-- Section-->
 		<section class="pt-5" id="grocery">
-			<h2 class="text-center"><i class="fas fa-shopping-basket pe-3"></i>Grocery</h2>
-			<div class="container px-4 px-lg-5 mt-5">
+			<h2 class="text-center border border-success rounded-pill p-2 ms-4 me-4 "><i class="fa-solid fa-earth-europe"></i></i>Adventure</h2>
+			<div class="container px-4 px-lg-5 mt-5" style="background-image: url()">
 				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/nick-nice-wm5JGYJVb7I-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Cooking Oil</h5>
@@ -82,7 +87,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/matt-ridley-H-LIL57PHCc-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Pasta</h5>
@@ -96,7 +101,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/brett-jordan-qGEBvoP97Q8-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Instant cupcake mixture</h5>
@@ -112,13 +117,38 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- section hero fake 1-->
+		<section>
+			<div class="hero">
+				<div class="row ">
+				  <div class="backBlue col-11 col-sm-12 col-md-6 order-md-1">
+					 <img class= " imgHero img-fluid " src="./images/share-books.jpg" alt="hero ilustration">
+				</div>
+				<div class="col-12 col-md-6 mt-2 pt-4 order-md-0 d-flex flex-column ">
+					<div class="row mb-auto mb-md-4"><h1>A Simple Bookmark Manager</h1></div>
+					<div class="row mb-auto mb-md-2"><p>A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instanly. Try it for free.</p></div>
+					<div class="row">
+						<div class="getBrowser col-6 col-lg-4">
+						   <button type="button" class="btn btn-primary active text-nowrap "><p class="m-0 p-0">Get it on Chrome</p></button>
+						</div>
+						<div class="getBrowser col-6 col-lg-4">
+						  <button type="button" class="btn btn-light active text-nowrap p-auto shadow fw-bolder"><p class="m-0 p-0">Get it on Firefox</p></button>
+						</div>
+					</div>
+				</div>
+	  
+				</div>
+			</div>
+		</section>
+
 		<section class="pt-5" id="beauty">
-			 <h2 class="text-center"><i class="fas fa-heart pe-3"></i>Beauty</h2>
+			 <h2 class="text-center border border-success rounded-pill p-2 ms-4 me-4"><i class="fa-solid fa-robot"></i> Sci-fi</h2>
 			<div class="container px-4 px-lg-5 mt-5">
 				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/annie-spratt-ZT4_d3-vyUg-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">All-in-1</h5>
@@ -132,7 +162,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/thought-catalog-V5BGaJ0VaLU-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Zero makeup kit</h5>
@@ -146,7 +176,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/sincerely-media-CXYPfveiuis-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Lip tints</h5>
@@ -162,13 +192,38 @@
 				</div>
 			</div>
 		</section>
+
+		<!-- section hero fake 2-->
+		<section>
+			<div class="hero">
+				<div class="row ">
+				<div class="backBlue col-11 col-sm-12 col-md-6 order-md-1">
+					<img class= " imgHero img-fluid " src="./images/dog-lector.jpg" alt="hero ilustration">
+				</div>
+				<div class="col-12 col-md-6 mt-2 pt-4 order-md-0 d-flex flex-column ">
+					<div class="row mb-auto mb-md-4"><h1>A Simple Bookmark Manager</h1></div>
+					<div class="row mb-auto mb-md-2"><p>A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instanly. Try it for free.</p></div>
+					<div class="row">
+						<div class="getBrowser col-6 col-lg-4">
+						<button type="button" class="btn btn-primary active text-nowrap "><p class="m-0 p-0">Get it on Chrome</p></button>
+						</div>
+						<div class="getBrowser col-6 col-lg-4">
+						<button type="button" class="btn btn-light active text-nowrap p-auto shadow fw-bolder"><p class="m-0 p-0">Get it on Firefox</p></button>
+						</div>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</section>
+
 		<section class="pt-5" id="clothes">
-			 <h2 class="text-center"><i class="fas fa-tshirt pe-3"></i>Clothes</h2>
+			 <h2 class="text-center border border-success rounded-pill p-2 ms-4 me-4"><i class="fa-solid fa-user-secret"></i> thriller</h2>
 			<div class="container px-4 px-lg-5 mt-5">
 				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/ahmed-almakhzanji-kshkB1i5_5o-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Lawn dress</h5>
@@ -182,7 +237,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/alabaster-co-ERDtf2D6xPY-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Lawn-chiffon combo</h5>
@@ -196,7 +251,7 @@
 					</div>
 					<div class="col mb-5">
 						<div class="card h-100">
-							<img class="card-img-top" src="./images/product.svg" alt="..." />
+							<img class="card-img-top" src="./images/foto llibre 9.jpg" alt="..." />
 							<div class="card-body p-4">
 								<div class="text-center">
 									<h5 class="fw-bolder">Toddler Frock</h5>
@@ -215,7 +270,7 @@
 	
         <!-- Footer-->
         <footer class="py-3 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; YourBooks 2022</p></div>
         </footer>
 		
 		<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
