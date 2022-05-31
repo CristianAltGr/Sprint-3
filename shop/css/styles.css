@@ -12,11 +12,58 @@
  */
 
 header .container{
-  background-color: #055160;
+  background-color: #095564;
   opacity: 70%;
   border-radius: 20px;
   
 }
+
+h2{
+ background-color: #107a49c2;
+}
+
+.fake{
+  background-color: #055160;
+  border-radius: 20px;
+}
+
+.fake p{
+  color: white;
+}
+
+.imgHero{
+  height: 300px;
+  width: 300px;
+}
+
+.card img{
+  height: 200px;
+ 
+}
+
+.textHead{
+  animation: innText 2s ease-in;
+}
+
+@keyframes innText{
+
+    0%{
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    50%{
+      opacity: 1;
+      transform: translateX(100px);
+    }
+
+    100%{
+      transform: translateX(0);
+    }
+
+} 
+
+
 
 :root {
   --bs-blue: #0d6efd;

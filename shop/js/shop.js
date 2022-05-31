@@ -2,9 +2,9 @@
 var products = [
    {
         id: 1,
-        name: 'cooking oil',
+        name: 'Milk and honey',
         price: 10.5,
-        type: 'grocery',
+        type: 'adventure',
         offer: {
             number: 3,
             percent: 20
@@ -15,9 +15,9 @@ var products = [
     },
     {
         id: 2,
-        name: 'Pasta',
+        name: 'How innovation works',
         price: 6.25,
-        type: 'grocery',
+        type: 'adventure',
         quantity: 1,
         subtotal: 6.25,
         
@@ -25,9 +25,9 @@ var products = [
     },
     {
         id: 3,
-        name: 'Instant cupcake mixture',
+        name: 'Delight!',
         price: 5,
-        type: 'grocery',
+        type: 'adventure',
         offer: {
             number: 10,
             percent: 30
@@ -38,54 +38,54 @@ var products = [
     },
     {
         id: 4,
-        name: 'All-in-one',
-        price: 260,
-        type: 'beauty',
+        name: 'Wabi Sabi',
+        price: 26,
+        type: 'sci-fi',
         quantity: 1,
-        subtotal: 260,
+        subtotal: 26,
         
     },
     {
         id: 5,
-        name: 'Zero Make-up Kit',
+        name: '101 essays changes',
         price: 20.5,
-        type: 'beauty',
+        type: 'sci-fi',
         quantity: 1,
         subtotal: 20.5,
         
     },
     {
         id: 6,
-        name: 'Lip Tints',
+        name: 'Holy scriptures',
         price: 12.75,
-        type: 'beauty',
+        type: 'sci-fi',
         quantity: 1,
         subtotal: 12.75,
         
     },
     {
         id: 7,
-        name: 'Lawn Dress',
+        name: 'Thinking fast and slow',
         price: 15,
-        type: 'clothes',
+        type: 'thriller',
         quantity: 1,
         subtotal: 15,
         
     },
     {
         id: 8,
-        name: 'Lawn-Chiffon Combo',
+        name: 'Pslams',
         price: 19.99,
-        type: 'clothes',
+        type: 'thriller',
         quantity: 1,
         subtotal: 19.99,
         
     },
     {
         id: 9,
-        name: 'Toddler Frock',
+        name: 'All the letters',
         price: 9.99,
-        type: 'clothes',
+        type: 'thrillers',
         quantity: 1,
         subtotal: 9.99,
         
@@ -170,7 +170,7 @@ function resetStats(){
                 prod.subtotal= 5;
                 break;
             case 4: 
-                prod.subtotal= 260;
+                prod.subtotal= 26;
                 break;
             case 5: 
                 prod.subtotal= 20.5;
@@ -214,7 +214,7 @@ function calculateTotal() {
         }
     }
 
-    document.getElementById("total_price").innerHTML= total;
+    document.getElementById("total_price").innerHTML= total.toFixed(2);
 }
 
 // Exercise 4

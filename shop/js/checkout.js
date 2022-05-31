@@ -112,7 +112,7 @@ function onlyLettersLName(fLName){
 
 function mailcheking(fEmail){
 	let error = 0;
-	const patternMail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)/
+	const patternMail =  /[@]+/g
 	let check = patternMail.test(fEmail);
 	let explan = "";
 	document.getElementById("errorEmail").classList.add("invalid-feedback");
@@ -129,7 +129,7 @@ function mailcheking(fEmail){
 
 	if(!check){
 
-		explan += "The Email needs @ ";
+		explan += "The Email needs @. ";
 		document.getElementById("errorEmail").innerHTML= explan; 
 		document.getElementById("fEmail").style.border = "1px solid red";
 		document.getElementById("errorEmail").classList.remove("invalid-feedback");
@@ -161,7 +161,7 @@ function checkPassword(fPassword){
 
 	if(!checkLet || !checkNum){
 
-		explan += " The password needs letters and number.";
+		explan += " Password needs letters and numbers.";
 		document.getElementById("errorPassword").innerHTML= explan; 
 		document.getElementById("fPassword").style.border = "1px solid red";
 		document.getElementById("errorPassword").classList.remove("invalid-feedback");
@@ -195,8 +195,8 @@ function checkAddress(fAddress){
 
 function checkNumber(fPhone){
 	let error = 0;
-	const patternNum = /\d/g;
-	let check = patternNum.test(fPhone);
+	const patternNum = /\D+/g
+	let check = !patternNum.test(fPhone);
 	let explan = "";
 	document.getElementById("errorPhone").classList.add("invalid-feedback");
 
@@ -212,7 +212,7 @@ function checkNumber(fPhone){
 
 	if(!check){
 
-		explan += " [0-9] ";
+		explan += " [0-9]. ";
 		document.getElementById("errorPhone").innerHTML= explan; 
 		document.getElementById("fPhone").style.border = "1px solid red";
 		document.getElementById("errorPhone").classList.remove("invalid-feedback");
