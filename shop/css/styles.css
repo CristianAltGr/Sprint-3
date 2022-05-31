@@ -11,10 +11,22 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+header{
+  background-image: url(./images/hero-img.jpg);
+  height: 500px; 
+  width: 100%; 
+  background-repeat: round;
+}
+
 header .container{
   background-color: #095564;
   opacity: 70%;
   border-radius: 20px;
+  
+}
+
+body{
+  background-image: url(/shop/images/annie-spratt-pKpipZVVEC0-unsplash.jpg);
   
 }
 
@@ -37,7 +49,7 @@ h2{
 }
 
 .card img{
-  height: 200px;
+  height: 250px;
  
 }
 

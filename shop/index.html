@@ -24,7 +24,7 @@
 		<nav class="navbar py-3 py-lg-0 navbar-light bg-light navbar-expand-lg" id="navbar-example2">
 			 <div class="container d-flex">
 				 <a class="navbar-brand" href="#!">YourBooks</a>
-				 <div class="d-flex flex-row order-lg-last align-items-center">
+				 <div class="d-flex flex-row order-last align-items-between">
 				 
 					 <button type="button" class="navbar-toggler order-last collapsed" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
 						 <span class="navbar-toggler-icon"></span>
@@ -53,12 +53,12 @@
 
 					 </ul>
 				 </div>
-				 <a href="checkout.html" class="btn btn-outline-dark m-3">Sign inn</a>
+				 <a href="checkout.html" class="d-none d-lg-block d-xl-noned-flex justify-content-end btn btn-outline-dark m-3">Checkout</a>
 			 </div>
 		 </nav>
 
         <!-- Header-->
-        <header class="bg-img  d-flex justify-content-center align-items-center" style="background-image: url(./images/hero-img.jpg); height:700px; width: 100%; background-repeat: round;">
+        <header class="bg-img  d-flex justify-content-center align-items-center">
             <div class=" container">
                 <div class="text-center text-white">
                     <h1 class="display-4 fw-bolder">Your books Shop</h1>
@@ -71,7 +71,7 @@
 		<section class="pt-5" id="adventures">
 			<h2 class="text-center border border-success rounded-pill p-2 ms-5 me-5 "><i class="fa-solid fa-earth-europe"></i></i>Adventure</h2>
 			<div class="container px-4 px-lg-5 mt-5" style="background-image: url()">
-				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-between">
 					<div class="col mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/sincerely-media-CXYPfveiuis-unsplash.jpg" alt="..." />
@@ -100,7 +100,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col mb-5">
+					<div class="col-12 col-md-4 mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/brett-jordan-qGEBvoP97Q8-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
@@ -141,11 +141,11 @@
 		<section class="pt-5" id="sci-fi">
 			 <h2 class="text-center border border-success rounded-pill p-2 ms-5 me-5"><i class="fa-solid fa-robot"></i> Sci-fi</h2>
 			<div class="container px-4 px-lg-5 mt-5">
-				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-between">
 					<div class="col mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/annie-spratt-ZT4_d3-vyUg-unsplash.jpg" alt="..." />
-							<div class="card-body p-4">
+							<div class="card-body p-3">
 								<div class="text-center">
 									<h5 class="fw-bolder">Wabi Sabi</h5>
 									$26
@@ -170,7 +170,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col mb-5">
+					<div class="col-12 col-md-4 mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/nick-nice-wm5JGYJVb7I-unsplash.jpg" alt="..." />
 							<div class="card-body p-4">
@@ -211,7 +211,7 @@
 		<section class="pt-5" id="thriller">
 			 <h2 class="text-center border border-success rounded-pill p-2 ms-5 me-5"><i class="fa-solid fa-user-secret"></i> thriller</h2>
 			<div class="container px-4 px-lg-5 mt-5">
-				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+				<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-3 justify-content-between">
 					<div class="col mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/ahmed-almakhzanji-kshkB1i5_5o-unsplash.jpg" alt="..." />
@@ -240,7 +240,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col mb-5">
+					<div class="col-12 col-md-4 mb-5">
 						<div class="card h-100">
 							<img class="card-img-top" src="./images/foto llibre 9.jpg" alt="..." />
 							<div class="card-body p-4">
@@ -307,8 +307,8 @@
 					Total: $<span id="total_price">0</span>
 				  </div>
 				  <div class="text-center"> 
-					<a href="checkout.html" class="btn btn-primary m-3">Checkout</a>
-					<a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-primary m-3">Clean Cart</a>
+					<a href="checkout.html" class="btn btn-outline-dark m-3">Checkout</a>
+					<a href="javascript:void(0)" onclick="cleanCart()" class="btn btn-outline-dark m-3">Clean Cart</a>
 				
 				  </div>
 			  </div>
