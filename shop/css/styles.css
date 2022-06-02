@@ -10,6 +10,67 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+
+
+header .container{
+  background-color: #095564;
+  opacity: 70%;
+  border-radius: 20px;
+  
+}
+
+body{
+  background-image: url(/shop/images/annie-spratt-pKpipZVVEC0-unsplash.jpg);
+  
+}
+
+h2{
+ background-color: #107a49c2;
+}
+
+.fake{
+  background-color: #055160;
+  border-radius: 20px;
+}
+
+.fake p{
+  color: white;
+}
+
+.imgHero{
+  height: 300px;
+  width: 300px;
+}
+
+.card img{
+  height: 250px;
+ 
+}
+
+.textHead{
+  animation: innText 2s ease-in;
+}
+
+@keyframes innText{
+
+    0%{
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+
+    50%{
+      opacity: 1;
+      transform: translateX(100px);
+    }
+
+    100%{
+      transform: translateX(0);
+    }
+
+} 
+
+
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -155,6 +216,12 @@ h6, .h6 {
 p {
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.form p{
+
+  font-size: 1rem;
+  color: red;
 }
 
 abbr[title],
